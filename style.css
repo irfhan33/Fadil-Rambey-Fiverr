@@ -11,6 +11,11 @@
   font-weight: 300;
 }
 
+a {
+  text-decoration: none;
+  color: white;
+}
+
 body {
   font-family: "Gradual", sans-serif;
   margin: 0;
@@ -193,11 +198,11 @@ svg {
     align-items: center;
   }
 
-  .gallery img {
+  /* .gallery img {
     display: none;
   }
 
   .gallery img.mobile {
     display: block;
-  }
+  } */
 }
