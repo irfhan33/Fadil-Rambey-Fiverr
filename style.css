@@ -37,7 +37,7 @@ body {
 .summary span {
   display: block;
   line-height: 20px;
-  font-size: 16px;
+  font-size: 14px;
   text-align: center;
 }
 
@@ -84,12 +84,14 @@ body {
   margin-left: auto;
   margin-right: auto;
   place-items: center;
-  max-width: 600px;
+  max-width: 640px;
 }
 
 .icon-wrapper {
   cursor: pointer;
   position: relative;
+  display: grid;
+  place-items: center;
 }
 
 .icon-wrapper::after {
@@ -99,7 +101,7 @@ body {
   background: white;
   position: absolute;
   left: 0;
-  bottom: 0px;
+  bottom: -10px;
   opacity: 0;
   transition: all 250ms;
 }
@@ -113,6 +115,7 @@ body {
   justify-content: center;
   gap: 30px;
   align-items: center;
+  font-size: 14px;
 }
 
 .link-download {
@@ -125,11 +128,10 @@ body {
   display: flex;
   margin-top: 120px;
   justify-content: center;
-  gap: 5px;
 }
 
-.copyright p {
-  display: block;
+.copyright span {
+  font-size: 14px;
 }
 
 .icon-title {
@@ -156,14 +158,26 @@ body {
   opacity: 1;
 }
 
+svg {
+  width: 25px;
+  height: 25px;
+}
+
 @media only screen and (max-width: 768px) {
   .gallery {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
   .social-media {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 10px;
+    grid-template-columns: repeat(3, minmax(min-content, max-content));
+    justify-content: center;
+    margin-bottom: 100px;
+    gap: 60px;
+  }
+
+  .icon-wrapper {
+    display: grid;
+    place-items: center;
   }
 
   .links {
